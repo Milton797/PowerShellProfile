@@ -23,9 +23,9 @@
       - [Install NuGet](#install-nuget)
       - [Install z, PSFzf, posh-git, PSReadLine, PowerColorLS, Terminal-Icons](#install-z-psfzf-posh-git-psreadline-powercolorls-terminal-icons)
   - [Copy the new configuration on $profile path](#copy-the-new-configuration-on-profile-path)
-    - [Online installation](#online-installation)
-    - [Clone or download version](#clone-or-download-version)
-    - [Last steps](#last-steps)
+    - [Online installation method](#online-installation-method)
+    - [Clone or download version method](#clone-or-download-version-method)
+  - [Last steps](#last-steps)
   - [Available alias](#available-alias)
   - [Scoop alias](#scoop-alias)
     - [PowerShell alias](#powershell-alias)
@@ -37,18 +37,20 @@
 
 > **Warning**
 >
+> - Windows 10 Anniversary Update, Windows Server 2016 or higher
 > - Windows Terminal use PowerShell version 5.1 by default, for
 > some of the features, we might need a PowerShell 7
-> - You can ignore installing packages if you already have them
+> - To see your PowerShell version use $PSVersionTable
 
-- [PowerShell Core/Desktop](https://microsoft.com/PowerShell "PowerShell Core/Desktop")
 - [Windows Terminal](https://github.com/microsoft/terminal "Windows Terminal")
+- [PowerShell Core/Desktop](https://microsoft.com/PowerShell "PowerShell Core/Desktop")
 
 ## Installation
 
 > **Note**
 >
-> You can use other sources than scoop to install the packages
+> - You can use other sources than scoop to install the packages
+> - **You can ignore installing packages if you already have them**
 
 ### Install [Scoop](https://scoop.sh/ "scoop") command-line installer
 
@@ -163,13 +165,17 @@ Install-Module -Name z, PSFzf, posh-git, PSReadLine, PowerColorLS, Terminal-Icon
 
 ## Copy the new configuration on $profile path
 
-### Online installation
+> **Note**
+>
+> Select only one of both
+
+### Online installation method
 
 ```bash
 Invoke-WebRequest -Uri "https://raw.githubusercontent.com/Milton797/PowerShellProfile/master/Microsoft.PowerShell_profile.ps1" -OutFile $profile
 ```
 
-### Clone or download version
+### Clone or download version method
 
 > **Note**
 >
@@ -180,7 +186,7 @@ Invoke-WebRequest -Uri "https://raw.githubusercontent.com/Milton797/PowerShellPr
 Copy-Item -Force -Path ".\Microsoft.PowerShell_profile.ps1" -Destination $profile
 ```
 
-### Last steps
+## Last steps
 
 - Deletes all old installed versions of apps
 

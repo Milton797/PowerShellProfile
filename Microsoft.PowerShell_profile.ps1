@@ -80,17 +80,11 @@ function Invoke-SetFuzzyDirectory {
 }
 
 function Clear-CommandHistory {
-    z -clean
-    Clear-History
-    Remove-Item "$env:APPDATA/Microsoft/Windows/PowerShell/PSReadLine/*"
-}
-
-function Clear-CommandHistory {
     $confirm = (Read-Host "Are you sure to delete the history? (y/n)").ToLower()
     if ($confirm -eq "s" -or $confirm -eq "y") {
         z -clean
         Clear-History
-        Remove-Item "$env:APPDATA/Microsoft/Windows/PowerShell/PSReadLine/*" -Confirm
+        Remove-Item "$env:APPDATA/Microsoft/Windows/PowerShell/PSReadLine/*"
     }
 }
 
