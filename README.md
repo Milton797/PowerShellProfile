@@ -103,10 +103,10 @@ scoop dump nerd-fonts
 
 #### Install selected font
 
-In my case CascadiaCode-NF
+In my case CascadiaCode-NF and CascadiaCode-NF-Mono
 
 ```bash
-scoop install CascadiaCode-NF
+scoop install CascadiaCode-NF CascadiaCode-NF-Mono
 ```
 
 > **Warning**
@@ -114,6 +114,7 @@ scoop install CascadiaCode-NF
 > - Close the Windows Terminal to refresh the new installed font
 > - If the new font doesn't appear try checking the 'Show all fonts' box
 > - **Make sure to set the new font in Windows Terminal**
+> - **Preferably use Mono fonts for the terminal**
 
 ### Install [Oh My Posh](https://ohmyposh.dev/docs/ "Oh My Posh")
 
