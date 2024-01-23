@@ -59,7 +59,7 @@ Set-Alias -Name ifd -Value Invoke-SetFuzzyDirectory
 Set-Alias -Name cat -Value bat -Option AllScope
 Set-Alias -Name ls -Value PowerColorLS -Option AllScope
 
-# Funciones
+# Functions
 # -------------------------------------
 function Invoke-Explorer {
     Invoke-Expression "explorer.exe ."
@@ -99,6 +99,5 @@ function Get-PSVersion {
             $FinalInfo += "$($key): $($VersionData[$key])`n"
         }
     }
-
     return $FinalInfo
 }
